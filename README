@@ -1,3 +1,9 @@
 SMSRoulette app that uses Twilio to connect random
 users anonymously.
 
+Requires:
+
+  redis-py: https://github.com/andymccurdy/redis-py
+  twilio.py: https://github.com/twilio/twilio-python
+  flask: http://flask.pocoo.org/
+
