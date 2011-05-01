@@ -1,9 +1,62 @@
 SMSRoulette app that uses Twilio to connect random
 users anonymously.
 
+In short, SMSRoulette is ChatRoulette for SMS.  This
+is just a tutorial to make people familiar with Twilio.
+
 Requires:
 
   redis-py: https://github.com/andymccurdy/redis-py
   twilio.py: https://github.com/twilio/twilio-python
   flask: http://flask.pocoo.org/
+  a few mobile phone users
+
+Don't forget to update your ACCOUNT_SID, ACCOUNT_TOKEN
+and CALLER_ID fields in sms.py.  These values can be
+obtained from your Twilio account's dashboard.
+
+How to run the app
+------------------
+
+1. Register for a free Twilio account.
+
+2. Checkout the code:
+
+   $ git clone git://github.com/jvimal/SMSRoulette.git
+   $ cd SMSRoulette
+   $ vi sms.py # change this file
+
+3. Download and install redis and the python helper module.
+
+   http://redis.io
+   (or) $ apt-get install redis-server
+   (or) $ brew install redis
+
+   and:
+   $ easy_install redis
+
+4. Download and install Flask webapp microframework
+
+   $ easy_install Flask
+
+5. Install twilio's python library.
+
+   $ easy_install twilio
+
+6. Make sure your computer can accept connections from
+   Twilio's servers.  If you're behind a firewall/NAT,
+   you might have to use port forwarding.
+
+   $ python app.py
+
+   This will run the webapp locally and will listen on
+   port 5000 by default.  Enter the address to reach this
+   webserver on Twilio's dashboard.  For me, just entering
+
+    http://<your ip>:5000/sms
+
+   and specifying that the request be of type GET, was
+   sufficient.
+
+7. Start using the app!
 
